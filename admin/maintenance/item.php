@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h3 class="card-title">Lista de Itens</h3>
 		<div class="card-tools">
-			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Adicionar Novo</a>
+			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span> Adicionar</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -12,14 +12,14 @@
 					<colgroup>
 						<col width="5%">
 						<col width="15%">
-						<col width="25%">
 						<col width="20%">
+						<col width="25%">
 						<col width="15%">
 						<col width="20%">
 					</colgroup>
-					<thead>
+					<thead style="text-align: center;">
 						<tr>
-							<th>#</th>
+							<th>ID</th>
 							<th>Data</th>
 							<th>Nome</th>
 							<th>Fornecedor</th>

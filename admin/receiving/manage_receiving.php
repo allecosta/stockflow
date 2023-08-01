@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
             $$key = $value;
         }
 		
-        if ($fromOrder == 1) {
+        if ($from_order == 1) {
             $query = $conn->query("
                 SELECT 
                     p.*,s.name AS supplier 
@@ -136,7 +136,7 @@ if (isset($_GET['bo_id'])) {
             <input type="hidden" name="po_id" value="<?= isset($po_id) ? $po_id : '' ?>">
             <div class="container-fluid">
                 <div class="row">
-                    <?php if (!isset($boID)): ?>
+                    <?php if (!isset($bo_id)): ?>
 						<div class="col-md-6">
 							<label class="control-label text-info">Cod. Pedido de Compra</label>
 							<input type="text" class="form-control form-control-sm rounded-0" value="<?= isset($po_code) ? $po_code : '' ?>" readonly>
@@ -199,7 +199,7 @@ if (isset($_GET['bo_id'])) {
                         $total = 0;
 						
                         if (isset($poID)):
-                            if (!isset($boID))
+                            if (!isset($bo_id))
                                 $query = $conn->query("
                                     SELECT 
                                         p.*,i.name,i.description 
@@ -220,7 +220,7 @@ if (isset($_GET['bo_id'])) {
                                     INNER JOIN 
                                         item_list i ON b.item_id = i.id 
                                     WHERE 
-                                        b.bo_id = '{$boID}'"
+                                        b.bo_id = '{$bo_id}'"
                                     );
 													
                             while ($row = $qry->fetch_assoc()):

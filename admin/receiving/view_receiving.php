@@ -7,8 +7,8 @@ if ($query->num_rows > 0) {
         $$key = $value;
     }
 
-    if ($fromOrder == 1) {
-        $purchaseOrderQuery = $conn->query("
+    if ($from_order == 1) {
+        $po_qry = $conn->query("
             SELECT 
                 p.*,s.name AS supplier 
             FROM 
@@ -19,8 +19,8 @@ if ($query->num_rows > 0) {
                 p.id= '{$form_id}' "
         );
 
-        if ($purchaseOrderQuery->num_rows > 0) {
-            foreach ($purchaseOrderQuery->fetch_array() as $key => $value) {
+        if ($po_qry->num_rows > 0) {
+            foreach ($po_qry->fetch_array() as $key => $value) {
                 if (!isset($$key)) {
                     $$key = $value;
                 }
@@ -58,14 +58,14 @@ if ($query->num_rows > 0) {
 
 <div class="card card-outline card-primary">
     <div class="card-header">
-        <h4 class="card-title">Detalhes do Pedido Recebido - <?= $purchaseOrderCode ?></h4>
+        <h4 class="card-title">Detalhes do Pedido Recebido - <?= $po_code ?></h4>
     </div>
     <div class="card-body" id="print_out">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
                     <label class="control-label text-info">Cod. Pedido de Compra</label>
-                    <div><?= isset($purchaseOrderCode) ? $purchaseOrderCode : '' ?></div>
+                    <div><?= isset($po_code) ? $po_code : '' ?></div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -91,7 +91,7 @@ if ($query->num_rows > 0) {
                 </colgroup>
                 <thead>
                     <tr class="text-light bg-navy">
-                        <th class="text-center py-1 px-2">Quantidade</th>
+                        <th class="text-center py-1 px-2">Quant.</th>
                         <th class="text-center py-1 px-2">Unidade</th>
                         <th class="text-center py-1 px-2">Item</th>
                         <th class="text-center py-1 px-2">Custo</th>
@@ -164,7 +164,7 @@ if ($query->num_rows > 0) {
     <div class="card-footer py-1 text-center">
         <button class="btn btn-flat btn-success" type="button" id="print">Imprimir</button>
         <a class="btn btn-flat btn-primary" href="<?= BASE_URL .'/admin?page=receiving/manage_receiving&id='.(isset($id) ? $id : '') ?>">Editar</a>
-        <a class="btn btn-flat btn-dark" href="<?= BASE_URL .'/admin?page=receiving' ?>">Voltar à lista</a>
+        <a class="btn btn-flat btn-dark" href="<?= BASE_URL .'/admin?page=receiving' ?>">Retornar</a>
     </div>
 </div>
 <table id="clone_list" class="d-none">

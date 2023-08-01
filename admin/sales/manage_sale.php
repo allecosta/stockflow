@@ -81,7 +81,7 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="col-md-3">
                             <div class="form-group">
-                                <label class="control-label">Quantidade
+                                <label class="control-label">Quant.
                                     <input type="number" step="any" class="form-control rounded-0">
                                 </label>
                             </div>
@@ -91,7 +91,7 @@ if (isset($_GET['id'])) {
                                 <button 
                                     type="button" 
                                     class="btn btn-flat btn-sm btn-primary" 
-                                    id="add_to_list">Adicionar à Lista
+                                    id="add_to_list">Adicionar
                                 </button>
                             </div>
                         </div>
@@ -100,7 +100,7 @@ if (isset($_GET['id'])) {
                 <table class="table table-striped table-bordered" id="list">
                     <colgroup>
                         <col width="5%">
-                        <col width="10%">
+                        <col width="15%">
                         <col width="10%">
                         <col width="25%">
                         <col width="25%">
@@ -109,7 +109,7 @@ if (isset($_GET['id'])) {
                     <thead>
                         <tr class="text-light bg-navy">
                             <th class="text-center py-1 px-2"></th>
-                            <th class="text-center py-1 px-2">Quantidade</th>
+                            <th class="text-center py-1 px-2">Quant.</th>
                             <th class="text-center py-1 px-2">Unidade</th>
                             <th class="text-center py-1 px-2">Item</th>
                             <th class="text-center py-1 px-2">Custo</th>

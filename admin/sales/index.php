@@ -5,7 +5,7 @@
 			<a 
                 href="<?= BASE_URL ?>admin/?page=sales/manage_sale" 
                 class="btn btn-flat btn-primary">
-                <span class="fas fa-plus"></span> Criar Novo
+                <span class="fas fa-plus"></span> Criar
             </a>
 		</div>
 	</div>
@@ -22,9 +22,9 @@
                         <col width="10%">
                         <col width="10%">
                     </colgroup>
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
-                            <th>#</th>
+                            <th>ID</th>
                             <th>Data</th>
                             <th>Cod. de Venda</th>
                             <th>Cliente</th>
@@ -45,7 +45,7 @@
                                 `date_created` DESC
                         ");
 
-                        while ($row = $qry->fetch_assoc()):
+                        while ($row = $query->fetch_assoc()):
                             $row['items'] = count(explode(',',$row['stock_ids']));
                         ?>
                             <tr>
@@ -96,7 +96,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza de que deseja excluir este registro de vendas permanentemente?","delete_sale",[$(this).attr('data-id')])
+			_conf("Tem certeza de que deseja excluir este registro de vendas permanentemente?","deleteSale",[$(this).attr('data-id')])
 		})
 
 		$('.table td,.table th').addClass('py-1 px-2 align-middle')

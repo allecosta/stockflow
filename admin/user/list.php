@@ -22,7 +22,7 @@ if ($_settings->chkFlashData('success')): ?>
 			<a 
 				href="?page=user/manage_user" 
 				class="btn btn-flat btn-primary">
-				<span class="fas fa-plus"></span>  Criar Novo
+				<span class="fas fa-plus"></span> Adicionar
 			</a>
 		</div>
 	</div>
@@ -98,7 +98,7 @@ if ($_settings->chkFlashData('success')): ?>
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza de que deseja excluir este usuário permanentemente?","delete_user",[$(this).attr('data-id')])
+			_conf("Tem certeza de que deseja excluir este usuário permanentemente?","deleteUser",[$(this).attr('data-id')])
 		})
 
 		$('.table td,.table th').addClass('py-1 px-2 align-middle')

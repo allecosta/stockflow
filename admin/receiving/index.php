@@ -103,7 +103,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza que ddeseja excluir esses pedidos recebidos permanentemente?","delete_receiving",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir esse pedido recebido permanentemente?","deleteReceiving",[$(this).attr('data-id')])
 		})
 		$('.view_details').click(function() {
 			uni_modal("Detalhes de Recebimento","receiving/view_receiving.php?id="+$(this).attr('data-id'),'mid-large')

@@ -8,18 +8,18 @@
 				<table class="table table-bordered table-stripped">
 					<colgroup>
 						<col width="5%">
+						<col width="10%">
 						<col width="20%">
+						<col width="30%">
 						<col width="20%">
-						<col width="40%">
-						<col width="15%">
 					</colgroup>
-					<thead>
+					<thead style="text-align: center;">
 						<tr>
-							<th>#</th>
-							<th>Nome do Item</th>
+							<th>ID</th>
+							<th>Item</th>
 							<th>Fornecedor</th>
 							<th>Descrição</th>
-							<th>Estoque Disponível </th>
+							<th>Disponível</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -72,7 +72,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza que deseja excluir este pedido recebido permanentemente?","delete_receiving",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este pedido recebido permanentemente?","deleteReceiving",[$(this).attr('data-id')])
 		})
 
 		$('.view_details').click(function() {
