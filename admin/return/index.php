@@ -5,7 +5,7 @@
 			<a 
                 href="<?= BASE_URL ?>admin/?page=return/manage_return" 
                 class="btn btn-flat btn-primary">
-                <span class="fas fa-plus"></span>  Criar Novo
+                <span class="fas fa-plus"></span>  Criar
             </a>
 		</div>
 	</div>
@@ -21,13 +21,13 @@
                         <col width="10%">
                         <col width="10%">
                     </colgroup>
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
-                            <th>#</th>
+                            <th>ID</th>
                             <th>Data</th>
                             <th>Cod. Devolução</th>
-                            <th>fornecedor</th>
-                            <th>Items</th>
+                            <th>Fornecedor</th>
+                            <th>Itens</th>
                             <th>Ação</th>
                         </tr>
                     </thead>
@@ -94,7 +94,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function(){
-			_conf("Tem certeza que deseja excluir este registro de devoução permanente?","delete_return",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este registro de devoução permanente?","deleteReturn",[$(this).attr('data-id')])
 		})
 
 		$('.table td,.table th').addClass('py-1 px-2 align-middle')

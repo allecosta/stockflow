@@ -27,7 +27,7 @@
         <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-exchange-alt"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Ordem de Retorno</span>
+                <span class="info-box-text">Pedido de Retorno</span>
                 <span class="info-box-number text-right">
                     <?= $conn->query("SELECT * FROM `back_order_list`")->num_rows; ?>
                 </span>
@@ -38,7 +38,7 @@
         <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-undo"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Returno</span>
+                <span class="info-box-text">Retorno</span>
                 <span class="info-box-number text-right">
                     <?= $conn->query("SELECT * FROM `return_list`")->num_rows; ?>
                 </span>
@@ -71,7 +71,7 @@
         <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-lightblue elevation-1"><i class="fas fa-th-list"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Items</span>
+                <span class="info-box-text">Itens</span>
                 <span class="info-box-number text-right">
                     <?= $conn->query("SELECT * FROM `item_list` where `status` = 1")->num_rows; ?>
                 </span>

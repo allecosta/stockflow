@@ -28,7 +28,7 @@
                             <li class="nav-item">
                                 <a href="<?= BASE_URL ?>admin/?page=purchase_order" class="nav-link nav-purchase_order">
                                     <i class="nav-icon fas fa-th-list"></i>
-                                    <p>Ordem de Compra</p>
+                                    <p>Pedido de Compra</p>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -85,7 +85,7 @@
                                 <li class="nav-item dropdown">
                                     <a href="<?= BASE_URL ?>admin/?page=system_info" class="nav-link nav-system_info">
                                         <i class="nav-icon fas fa-cogs"></i>
-                                        <p>configurações</p>
+                                        <p>Configurações</p>
                                     </a>
                                 </li>
                             <?php endif; ?>

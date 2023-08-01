@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
                                 `item_list` 
                             WHERE 
                                 status = 1 
-                            ORDE BY 
+                            ORDER BY 
                                 `name` ASC");
 
                         while ($row = $item->fetch_assoc()):
@@ -115,7 +115,7 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="col-md-2 text-center">
                             <div class="form-group">
-                                <button type="button" class="btn btn-flat btn-sm btn-primary" id="add_to_list">Adicionado a Lista</button>
+                                <button type="button" class="btn btn-flat btn-sm btn-primary" id="add_to_list">Adicionar</button>
                             </div>
                         </div>
                 </fieldset>

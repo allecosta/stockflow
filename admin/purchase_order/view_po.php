@@ -26,7 +26,7 @@ if ($query->num_rows >0) {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <label class="control-label text-info">Cod. Pedido de Compra</label>
+                    <label class="control-label text-info">Cod. Pedido</label>
                     <div><?php echo isset($po_code) ? $po_code : '' ?></div>
                 </div>
                 <div class="col-md-6">
@@ -47,7 +47,7 @@ if ($query->num_rows >0) {
                 </colgroup>
                 <thead>
                     <tr class="text-light bg-navy">
-                        <th class="text-center py-1 px-2">Quantidade</th>
+                        <th class="text-center py-1 px-2">Quant.</th>
                         <th class="text-center py-1 px-2">Unidade</th>
                         <th class="text-center py-1 px-2">Item</th>
                         <th class="text-center py-1 px-2">Custos</th>
@@ -67,7 +67,7 @@ if ($query->num_rows >0) {
                         WHERE 
                             p.po_id = '{$id}'");
 
-                    while ($row = $qry->fetch_assoc()):
+                    while ($row = $query->fetch_assoc()):
                         $total += $row['total']
                     ?>
                         <tr>
@@ -119,7 +119,7 @@ if ($query->num_rows >0) {
     <div class="card-footer py-1 text-center">
         <button class="btn btn-flat btn-success" type="button" id="print">Imprimir</button>
         <a class="btn btn-flat btn-primary" href="<?= BASE_URL.'/admin?page=purchase_order/manage_po&id='.(isset($id) ? $id : '') ?>">Edit</a>
-        <a class="btn btn-flat btn-dark" href="<?= BASE_URL.'/admin?page=purchase_order' ?>">Voltar à Lista</a>
+        <a class="btn btn-flat btn-dark" href="<?= BASE_URL.'/admin?page=purchase_order' ?>">Retornar</a>
     </div>
 </div>
 <table id="clone_list" class="d-none">

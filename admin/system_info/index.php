@@ -46,7 +46,7 @@
 					<img src="<?= validateImage($_settings->info('logo')) ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
 				</div>
 				<div class="form-group">
-					<label class="control-label">Cobrir</label>
+					<label class="control-label">Tela do Login</label>
 					<div class="custom-file">
 						<input type="file" class="custom-file-input rounded-circle" id="customFile" name="cover" onchange="displayImg2(this,$(this))">
 						<label class="custom-file-label" for="customFile">Escolher arquivo</label>

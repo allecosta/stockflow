@@ -15,13 +15,13 @@
                         <col width="10%">
                         <col width="10%">
                     </colgroup>
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
-                            <th>#</th>
-                            <th>Data de Criação</th>
-                            <th>Cod. Pedido Pendente</th>
+                            <th>ID</th>
+                            <th>Data</th>
+                            <th>Pedido</th>
                             <th>Fornecedor</th>
-                            <th>Items</th>
+                            <th>Itens</th>
                             <th>Status</th>
                             <th>Ação</th>
                         </tr>
@@ -39,7 +39,7 @@
                                 supplier_list s ON p.supplier_id = s.id 
                             ORDER BY p.`date_created` DESC");
 
-                        while ($row = $qry->fetch_assoc()):
+                        while ($row = $query->fetch_assoc()):
                             $row['items'] = $conn->query("
                                 SELECT 
                                     count(item_id) AS `items` 

@@ -1,8 +1,8 @@
 <div class="card card-outline card-primary">
 	<div class="card-header">
-		<h3 class="card-title">LLista de Fornecedores</h3>
+		<h3 class="card-title">Lista de Fornecedores</h3>
 		<div class="card-tools">
-			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Criar Novo</a>
+			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span> Criar</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -17,9 +17,9 @@
 						<col width="15%">
 						<col width="15%">
 					</colgroup>
-					<thead>
+					<thead style="text-align: center;">
 						<tr>
-							<th>#</th>
+							<th>ID</th>
 							<th>Data</th>
 							<th>Fornecedor</th>
 							<th>Contato Pessoal</th>
@@ -75,7 +75,7 @@
 			_conf("Tem certeza que deseja excluir este item?","delete_category",[$(this).attr('data-id')])
 		})
 		$('#create_new').click(function() {
-			uni_modal("<i class='fa fa-plus'></i> Adicionar Novo fornecedor","maintenance/manage_supplier.php","mid-large")
+			uni_modal("<i class='fa fa-plus'></i> Novo fornecedor","maintenance/manage_supplier.php","mid-large")
 		})
 		$('.edit_data').click(function(){
 			uni_modal("<i class='fa fa-edit'></i> Editar Detalhes do Fornecedor","maintenance/manage_supplier.php?id="+$(this).attr('data-id'),"mid-large")

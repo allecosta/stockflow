@@ -110,7 +110,7 @@ if ($query->num_rows > 0) {
             class="btn btn-flat btn-primary" 
             href="<?= BASE_URL .'/admin?page=return/manage_return&id='.(isset($id) ? $id : '') ?>">Editar
         </a>
-        <a class="btn btn-flat btn-dark" href="<?= BASE_URL .'/admin?page=return' ?>">Retornar à Lista</a>
+        <a class="btn btn-flat btn-dark" href="<?= BASE_URL .'/admin?page=return' ?>">Retornar</a>
     </div>
 </div>
 <table id="clone_list" class="d-none">

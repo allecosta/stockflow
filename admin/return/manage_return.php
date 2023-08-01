@@ -141,7 +141,7 @@ if (isset($_GET['id'])) {
                     <thead>
                         <tr class="text-light bg-navy">
                             <th class="text-center py-1 px-2"></th>
-                            <th class="text-center py-1 px-2">Quantidade</th>
+                            <th class="text-center py-1 px-2">Quant.</th>
                             <th class="text-center py-1 px-2">Unidade</th>
                             <th class="text-center py-1 px-2">Item</th>
                             <th class="text-center py-1 px-2">Custo</th>

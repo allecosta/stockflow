@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h3 class="card-title">Lista de Pedido de Compra</h3>
         <div class="card-tools">
-			<a href="<?= BASE_URL ?>admin/?page=purchase_order/manage_po" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Criar Nova</a>
+			<a href="<?= BASE_URL ?>admin/?page=purchase_order/manage_po" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Criar</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -12,19 +12,19 @@
                     <colgroup>
                         <col width="5%">
                         <col width="15%">
-                        <col width="20%">
+                        <col width="15%">
                         <col width="20%">
                         <col width="10%">
                         <col width="10%">
                         <col width="10%">
                     </colgroup>
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
-                            <th>#</th>
+                            <th>ID</th>
                             <th>Data</th>
-                            <th>Cod. Pedido de Compra</th>
+                            <th>Pedido</th>
                             <th>Fornecedor</th>
-                            <th>Items</th>
+                            <th>Itens</th>
                             <th>Status</th>
                             <th>Ação</th>
                         </tr>
