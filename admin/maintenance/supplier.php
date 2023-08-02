@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h3 class="card-title">Lista de Fornecedores</h3>
 		<div class="card-tools">
-			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span> Criar</a>
+			<a href="javascript:void(0)" id="create_new" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span> Adicionar</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -72,7 +72,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza que deseja excluir este item?","delete_category",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este item?","deleteCategory",[$(this).attr('data-id')])
 		})
 		$('#create_new').click(function() {
 			uni_modal("<i class='fa fa-plus'></i> Novo fornecedor","maintenance/manage_supplier.php","mid-large")
@@ -89,7 +89,7 @@
 	function deleteCategory($id) {
 		start_loader();
 		$.ajax({
-			url:_base_url_+"classes/Master.php?f=delete_supplier",
+			url:_base_url_+"classes/Master.php?f=deleteSupplier",
 			method:"POST",
 			data:{id: $id},
 			dataType:"json",

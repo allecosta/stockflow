@@ -1,11 +1,11 @@
-<h1 class="">Bem vindo <?= $_settings->info('name') ?></h1>
-<hr>
+<!-- <h3 class="">Bem vindo <?= $_settings->info('name') ?></h3>
+<hr> -->
 <div class="row">
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-info elevation-1"><i class="fas fa-th-list"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Pedido de Compra</span>
+                <span class="info-box-text">Pe. de Compra</span>
                 <span class="info-box-number text-right">
                     <?= $conn->query("SELECT * FROM `purchase_order_list`")->num_rows; ?>
                 </span>
@@ -27,7 +27,7 @@
         <div class="info-box bg-light shadow">
             <span class="info-box-icon bg-primary elevation-1"><i class="fas fa-exchange-alt"></i></span>
             <div class="info-box-content">
-                <span class="info-box-text">Pedido de Retorno</span>
+                <span class="info-box-text">Pe. de Retorno</span>
                 <span class="info-box-number text-right">
                     <?= $conn->query("SELECT * FROM `back_order_list`")->num_rows; ?>
                 </span>
