@@ -51,25 +51,22 @@ if (isset($_GET['id'])) {
                         <div class="form-group">
                             <label class="control-label text-info">Fornecedor
                                 <select name="supplier_id" class="custom-select select2">
-                                <option <?= !isset($supplier_id) ? 'selected' : '' ?> disabled></option>
-                                <?php 
-                                $supplier = $conn->query("
-                                    SELECT 
-                                        * 
-                                    FROM 
-                                        `supplier_list` 
-                                    WHERE 
-                                        status = 1 
-                                    ORDER BY `name` ASC
-                                ");
+                                    <option <?= !isset($supplier_id) ? 'selected' : '' ?> disabled></option>
+                                    <?php 
+                                        $supplier = $conn->query("
+                                            SELECT 
+                                                * 
+                                            FROM 
+                                                `supplier_list` 
+                                            WHERE 
+                                                status = 1 
+                                            ORDER BY `name` ASC
+                                        ");
 
-                                    while ($row = $supplier->fetch_assoc()):
-                                    ?>
-                                        <option 
-                                            value="<?= $row['id'] ?>" 
-                                            <?= isset($supplier_id) && $supplier_id == $row['id'] ? "selected" : "" ?>>
-                                            <?= $row['name'] ?>
-                                        </option>
+                                        while ($row = $supplier->fetch_assoc()): ?>
+                                            <option 
+                                                value="<?= $row['id'] ?>"<?= isset($supplier_id) && $supplier_id == $row['id'] ? "selected" : "" ?> ><?= $row['name'] ?>
+                                            </option>
                                     <?php endwhile; ?>
                                 </select>
                             </label>

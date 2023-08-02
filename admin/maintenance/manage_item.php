@@ -23,8 +23,9 @@ if (isset($_GET['id']) && $_GET['id'] > 0) {
 	<form action="" id="item-form">
 		<input type="hidden" name ="id" value="<?= isset($id) ? $id : '' ?>">
 		<div class="form-group">
-			<label for="name" class="control-label">Nome</label>
-			<input type="text" name="name" id="name" class="form-control rounded-0" value="<?= isset($name) ? $name : ''; ?>">
+			<label class="control-label">Nome
+				<input type="text" name="name" class="form-control rounded-0" value="<?= isset($name) ? $name : ''; ?>">
+			</label>
 		</div>
 		<div class="form-group">
 			<label class="control-label">Descrição
@@ -72,7 +73,7 @@ if (isset($_GET['id']) && $_GET['id'] > 0) {
 </div>
 <script>
 	$(document).ready(function() {
-        $('.select2').select2({placeholder:"Please Select here",width:"relative"})
+        $('.select2').select2({placeholder:"Selecione aqui",width:"relative"})
 		$('#item-form').submit(function(e) {
 			e.preventDefault();
             var _this = $(this)

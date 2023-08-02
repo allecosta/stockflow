@@ -5,7 +5,7 @@
 			<a 
                 href="<?= BASE_URL ?>admin/?page=return/manage_return" 
                 class="btn btn-flat btn-primary">
-                <span class="fas fa-plus"></span>  Criar
+                <span class="fas fa-plus"></span> Adicionar
             </a>
 		</div>
 	</div>
@@ -66,14 +66,14 @@
                                             class="dropdown-item" 
                                             href="<?= BASE_URL .'admin?page=return/view_return&id='.$row['id'] ?>" 
                                             data-id="<?= $row['id'] ?>">
-                                            <span class="fa fa-eye text-dark"></span> View
+                                            <span class="fa fa-eye text-dark"></span> Visualizar
                                         </a>
                                         <div class="dropdown-divider"></div>
                                         <a 
                                             class="dropdown-item" 
                                             href="<?= BASE_URL .'admin?page=return/manage_return&id='.$row['id'] ?>" 
                                             data-id="<?= $row['id'] ?>">
-                                            <span class="fa fa-edit text-primary"></span> Edit
+                                            <span class="fa fa-edit text-primary"></span> Editar
                                         </a>
                                         <div class="dropdown-divider"></div>
                                         <a 
@@ -94,7 +94,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function(){
-			_conf("Tem certeza que deseja excluir este registro de devoução permanente?","deleteReturn",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este registro de devolução?","deleteReturn",[$(this).attr('data-id')])
 		})
 
 		$('.table td,.table th').addClass('py-1 px-2 align-middle')

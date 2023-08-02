@@ -2,7 +2,7 @@
 	<div class="card-header">
 		<h3 class="card-title">Lista de Pedido de Compra</h3>
         <div class="card-tools">
-			<a href="<?= BASE_URL ?>admin/?page=purchase_order/manage_po" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span>  Criar</a>
+			<a href="<?= BASE_URL ?>admin/?page=purchase_order/manage_po" class="btn btn-flat btn-primary"><span class="fas fa-plus"></span> Adicionar</a>
 		</div>
 	</div>
 	<div class="card-body">
@@ -95,7 +95,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza que deseja excluir este pedido de compra permanentemente?","delete_po",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este pedido de compra?","deletePurchaseOrder",[$(this).attr('data-id')])
 		})
 		$('.view_details').click(function() {
 			uni_modal("Detalhes de Pagamento","transaction/view_payment.php?id="+$(this).attr('data-id'),'mid-large')
@@ -107,7 +107,7 @@
 	function deletePurchaserOrder($id) {
 		start_loader();
 		$.ajax({
-			url:_base_url_+"classes/Master.php?f=delete_po",
+			url:_base_url_+"classes/Master.php?f=deletePurchaseOrder",
 			method:"POST",
 			data:{id: $id},
 			dataType:"json",

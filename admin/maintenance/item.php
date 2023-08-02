@@ -79,7 +79,7 @@
 <script>
 	$(document).ready(function() {
 		$('.delete_data').click(function() {
-			_conf("Tem certeza que deseja excluir este item permanentemente?","delete_category",[$(this).attr('data-id')])
+			_conf("Tem certeza que deseja excluir este item?","deleteCategory",[$(this).attr('data-id')])
 		})
 		$('#create_new').click(function() {
 			uni_modal("<i class='fa fa-plus'></i> Adiconar Novo Item","maintenance/manage_item.php","mid-large")
@@ -97,11 +97,11 @@
 	function deleteCategory($id) {
 		start_loader();
 		$.ajax({
-			url:_base_url_+"classes/Master.php?f=delete_item",
+			url:_base_url_+"classes/Master.php?f=deleteItem",
 			method:"POST",
 			data:{id: $id},
 			dataType:"json",
-			error:err=>{
+			error:err=> {
 				console.log(err)
 				alert_toast("Ocorreu um erro.",'error');
 				end_loader();
